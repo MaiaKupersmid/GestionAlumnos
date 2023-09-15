@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = ViewBag.Titulo;
+}
+
+<h1>@ViewBag.Titulo</h1>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Legajo</th>
+        <th>Curso</th>
+    </tr>
+    @foreach (var alumno in ViewBag.Alumnos)
+    {
+        <tr>
+            <td>@alumno.Nombre</td>
+            <td>@alumno.Apellido</td>
+            <td>@alumno.Legajo</td>
+            <td>@alumno.Curso</td>
+            <td><a asp-action="Detalles" asp-route-legajo="@alumno.Legajo">Detalles</a></td>
+        </tr>
+    }
+</table>

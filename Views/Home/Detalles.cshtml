@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = ViewBag.Titulo;
+}
+
+<h1>@ViewBag.Titulo</h1>
+
+<p><strong>Nombre:</strong> @ViewBag.Alumno.Nombre</p>
+<p><strong>Apellido:</strong> @ViewBag.Alumno.Apellido</p>
+<p><strong>Legajo:</strong> @ViewBag.Alumno.Legajo</p>
+<p><strong>Curso:</strong> @ViewBag.Alumno.Curso</p>
+
+<a asp-action="Listado">Volver al Listado</a>
