@@ -31,13 +31,22 @@ public class HomeController : Controller
             
             return View();
         }
-
+        
         public IActionResult Detalles(string legajo)
         {
             Alumno alumno = BD.GetDetalleAlumno(legajo);
+            if (alumno == null)
+            {
+                return View("GetLegajo");
+            }
             ViewBag.Titulo = "Detalles del Alumno";
             ViewBag.Alumno = alumno;
             
+            return View();
+        }
+
+        public IActionResult GetLegajo()
+        {
             return View();
         }
 }

@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Obtener Legajo";
+}
+
+<h2>Obtener Legajo</h2>
+
+<form method="post" action="@Url.Action("Detalles", "Home")">
+    <div class="form-group">
+        <label for="NumeroLegajo">Número de Legajo:</label>
+        <input type="text" id="legajo" name="Legajo" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Obtener</button>
+</form>

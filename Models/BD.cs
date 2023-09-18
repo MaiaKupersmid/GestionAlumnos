@@ -26,7 +26,7 @@ public static class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string sql = "SELECT Nombre, Apellido, Curso FROM Alumnos WHERE Legajo = @legajo;";
-            alumno = connection.QueryFirstOrDefault<Alumno>(sql, new { legajo });
+            alumno = connection.QueryFirstOrDefault<Alumno>(sql, new {legajo});
         }
         return alumno;
     }
